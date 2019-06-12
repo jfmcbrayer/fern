@@ -20,9 +20,16 @@ except:
 import curses, time, os, copy
 
 try:
-    from xdg import (XDG_CACHE_HOME, XDG_CONFIG_DIRS, XDG_CONFIG_HOME,
-                     XDG_DATA_DIRS, XDG_DATA_HOME, XDG_RUNTIME_DIR)
+    from xdg import (
+        XDG_CACHE_HOME,
+        XDG_CONFIG_DIRS,
+        XDG_CONFIG_HOME,
+        XDG_DATA_DIRS,
+        XDG_DATA_HOME,
+        XDG_RUNTIME_DIR,
+    )
     from os.path import join
+
     ferndir = os.path.join(XDG_CONFIG_HOME, "fern")
 except:
     home = ""
