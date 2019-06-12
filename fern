@@ -310,6 +310,9 @@ def drawPanels(uid, rows, cols, highlighted=0):
         )
     )
     for i in range(0, int((rows - 3) / 4)):
+        bottom = "/"
+        if i < 10:
+            bottom = str(i)
         if highlighted == i:
             scr.addstr(
                 "".join(["#", " " * (leftPanelCols - 1), " " * (rightPanelCols)]),
@@ -348,7 +351,7 @@ def drawPanels(uid, rows, cols, highlighted=0):
             )
             scr.addstr(
                 "".join(
-                    ["+", "_" * (leftPanelCols - 1), "/", " " * (rightPanelCols - 1)]
+                    ["+", "_" * (leftPanelCols - 1), bottom, " " * (rightPanelCols - 1)]
                 ),
                 color,
             )
